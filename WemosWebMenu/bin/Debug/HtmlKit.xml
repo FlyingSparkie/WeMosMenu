@@ -1,0 +1,3413 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HtmlKit</name>
+    </assembly>
+    <members>
+        <member name="T:HtmlKit.HtmlAttribute">
+            <summary>
+            An HTML attribute.
+            </summary>
+            <remarks>
+            An HTML attribute.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlAttribute.#ctor(HtmlKit.HtmlAttributeId,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlAttribute"/> class.
+            </summary>
+            <remarks>
+            Creates a new HTML attribute with the given id and value.
+            </remarks>
+            <param name="id">The attribute identifier.</param>
+            <param name="value">The attribute value.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="id"/> is not a valid value.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlAttribute.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlAttribute"/> class.
+            </summary>
+            <remarks>
+            Creates a new HTML attribute with the given name and value.
+            </remarks>
+            <param name="name">The attribute name.</param>
+            <param name="value">The attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="name"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:HtmlKit.HtmlAttribute.Id">
+            <summary>
+            Get the HTML attribute identifier.
+            </summary>
+            <remarks>
+            Gets the HTML attribute identifier.
+            </remarks>
+            <value>The attribute identifier.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlAttribute.Name">
+            <summary>
+            Get the name of the attribute.
+            </summary>
+            <remarks>
+            Gets the name of the attribute.
+            </remarks>
+            <value>The name of the attribute.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlAttribute.Value">
+            <summary>
+            Get the value of the attribute.
+            </summary>
+            <remarks>
+            Gets the value of the attribute.
+            </remarks>
+            <value>The value of the attribute.</value>
+        </member>
+        <member name="T:HtmlKit.HtmlAttributeCollection">
+            <summary>
+            A readonly collection of HTML attributes.
+            </summary>
+            <remarks>
+            A readonly collection of HTML attributes.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeCollection.Empty">
+            <summary>
+            An empty attribute collection.
+            </summary>
+            <remarks>
+            An empty attribute collection.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlAttributeCollection.#ctor(System.Collections.Generic.IEnumerable{HtmlKit.HtmlAttribute})">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlAttributeCollection"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlAttributeCollection"/>.
+            </remarks>
+            <param name="collection">A collection of attributes.</param>
+        </member>
+        <member name="P:HtmlKit.HtmlAttributeCollection.Count">
+            <summary>
+            Get the number of attributes in the collection.
+            </summary>
+            <remarks>
+            Gets the number of attributes in the collection.
+            </remarks>
+            <value>The number of attributes in the collection.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlAttributeCollection.Item(System.Int32)">
+            <summary>
+            Get the <see cref="T:HtmlKit.HtmlAttribute"/> at the specified index.
+            </summary>
+            <remarks>
+            Gets the <see cref="T:HtmlKit.HtmlAttribute"/> at the specified index.
+            </remarks>
+            <value>The HTML attribute at the specified index.</value>
+            <param name="index">The index.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="index"/> is out of range.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlAttributeCollection.GetEnumerator">
+            <summary>
+            Gets an enumerator for the attribute collection.
+            </summary>
+            <remarks>
+            Gets an enumerator for the attribute collection.
+            </remarks>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="M:HtmlKit.HtmlAttributeCollection.System#Collections#IEnumerable#GetEnumerator">
+            <summary>
+            Gets an enumerator for the attribute collection.
+            </summary>
+            <remarks>
+            Gets an enumerator for the attribute collection.
+            </remarks>
+            <returns>The enumerator.</returns>
+        </member>
+        <member name="T:HtmlKit.HtmlAttributeId">
+            <summary>
+            HTML attribute identifiers.
+            </summary>
+            <remarks>
+            HTML attribute identifiers.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Unknown">
+            <summary>
+            An unknown HTML attribute identifier.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Abbr">
+            <summary>
+            The "abbr" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Accept">
+            <summary>
+            The "accept" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.AcceptCharset">
+            <summary>
+            The "accept-charset" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.AccessKey">
+            <summary>
+            The "accesskey" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Action">
+            <summary>
+            The "action" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Align">
+            <summary>
+            The "align" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Alink">
+            <summary>
+            The "alink" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Alt">
+            <summary>
+            The "alt" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Archive">
+            <summary>
+            The "archive" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Axis">
+            <summary>
+            The "axis" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Background">
+            <summary>
+            The "background" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.BGColor">
+            <summary>
+            The "bgcolor" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Border">
+            <summary>
+            The "border" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.CellPadding">
+            <summary>
+            The "cellpadding" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.CellSpacing">
+            <summary>
+            The "cellspacing" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Char">
+            <summary>
+            The "char" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.CharOff">
+            <summary>
+            The "charoff" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Charset">
+            <summary>
+            The "charset" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Checked">
+            <summary>
+            The "checked" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Cite">
+            <summary>
+            The "cite" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Class">
+            <summary>
+            The "class" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.ClassId">
+            <summary>
+            The "classid" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Clear">
+            <summary>
+            The "clear" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Code">
+            <summary>
+            The "code" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.CodeBase">
+            <summary>
+            The "codebase" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.CodeType">
+            <summary>
+            The "codetype" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Color">
+            <summary>
+            The "color" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Cols">
+            <summary>
+            The "cols" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.ColSpan">
+            <summary>
+            The "colspan" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Compact">
+            <summary>
+            The "compact" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Content">
+            <summary>
+            The "content" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Coords">
+            <summary>
+            The "coords" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Data">
+            <summary>
+            The "data" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.DateTime">
+            <summary>
+            The "datetime" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Declare">
+            <summary>
+            The "declare" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Defer">
+            <summary>
+            The "defer" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Dir">
+            <summary>
+            The "dir" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Disabled">
+            <summary>
+            The "disabled" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.DynSrc">
+            <summary>
+            The "dynsrc" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.EncType">
+            <summary>
+            The "enctype" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Face">
+            <summary>
+            The "face" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.For">
+            <summary>
+            The "for" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Frame">
+            <summary>
+            The "frame" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.FrameBorder">
+            <summary>
+            The "frameborder" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Headers">
+            <summary>
+            The "headers" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Height">
+            <summary>
+            The "height" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Href">
+            <summary>
+            The "href" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.HrefLang">
+            <summary>
+            The "hreflang" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Hspace">
+            <summary>
+            The "hspace" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.HttpEquiv">
+            <summary>
+            The "http-equiv" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Id">
+            <summary>
+            The "id" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.IsMap">
+            <summary>
+            The "ismap" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Label">
+            <summary>
+            The "label" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Lang">
+            <summary>
+            The "lang" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Language">
+            <summary>
+            The "language" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.LeftMargin">
+            <summary>
+            The "leftmargin" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Link">
+            <summary>
+            The "link" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.LongDesc">
+            <summary>
+            The "longdesc" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.LowSrc">
+            <summary>
+            The "lowsrc" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.MarginHeight">
+            <summary>
+            The "marginheight" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.MarginWidth">
+            <summary>
+            The "marginwidth" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.MaxLength">
+            <summary>
+            The "maxlength" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Media">
+            <summary>
+            The "media" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Method">
+            <summary>
+            The "method" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Multiple">
+            <summary>
+            The "multiple" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Name">
+            <summary>
+            The "name" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.NoHref">
+            <summary>
+            The "nohref" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.NoResize">
+            <summary>
+            The "noresize" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.NoShade">
+            <summary>
+            The "noshade" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.NoWrap">
+            <summary>
+            The "nowrap" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Object">
+            <summary>
+            The "object" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Profile">
+            <summary>
+            The "profile" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Prompt">
+            <summary>
+            The "prompt" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.ReadOnly">
+            <summary>
+            The "readonly" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Rel">
+            <summary>
+            The "rel" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Rev">
+            <summary>
+            The "rev" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Rows">
+            <summary>
+            The "rows" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.RowSpan">
+            <summary>
+            The "rowspan" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Rules">
+            <summary>
+            The "rules" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Scheme">
+            <summary>
+            The "scheme" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Scope">
+            <summary>
+            The "scope" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Scrolling">
+            <summary>
+            The "scrolling" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Selected">
+            <summary>
+            The "selected" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Shape">
+            <summary>
+            The "shape" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Size">
+            <summary>
+            The "size" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Span">
+            <summary>
+            The "span" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Src">
+            <summary>
+            The "src" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.StandBy">
+            <summary>
+            The "standby" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Start">
+            <summary>
+            The "start" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Style">
+            <summary>
+            The "style" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Summary">
+            <summary>
+            The "summary" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.TabIndex">
+            <summary>
+            The "tabindex" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Target">
+            <summary>
+            The "target" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Text">
+            <summary>
+            The "text" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Title">
+            <summary>
+            The "title" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.TopMargin">
+            <summary>
+            The "topmargin" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Type">
+            <summary>
+            The "type" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.UseMap">
+            <summary>
+            The "usemap" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Valign">
+            <summary>
+            The "valign" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Value">
+            <summary>
+            The "value" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.ValueType">
+            <summary>
+            The "valuetype" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Version">
+            <summary>
+            The "version" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Vlink">
+            <summary>
+            The "vlink" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Vspace">
+            <summary>
+            The "vspace" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.Width">
+            <summary>
+            The "width" attribute.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlAttributeId.XmlNS">
+            <summary>
+            The "xmlns" attribute.
+            </summary>
+        </member>
+        <member name="T:HtmlKit.HtmlAttributeIdExtensions">
+            <summary>
+            <see cref="T:HtmlKit.HtmlAttributeId"/> extension methods.
+            </summary>
+            <remarks>
+            <see cref="T:HtmlKit.HtmlAttributeId"/> extension methods.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlAttributeIdExtensions.ToAttributeName(HtmlKit.HtmlAttributeId)">
+            <summary>
+            Converts the enum value into the equivalent attribute name.
+            </summary>
+            <remarks>
+            Converts the enum value into the equivalent attribute name.
+            </remarks>
+            <returns>The attribute name.</returns>
+            <param name="value">The enum value.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlAttributeIdExtensions.ToHtmlAttributeId(System.String)">
+            <summary>
+            Converts the attribute name into the equivalent attribute id.
+            </summary>
+            <remarks>
+            Converts the attribute name into the equivalent attribute id.
+            </remarks>
+            <returns>The attribute id.</returns>
+            <param name="name">The attribute name.</param>
+        </member>
+        <member name="T:HtmlKit.HtmlEntityDecoder">
+            <summary>
+            An HTML entity decoder.
+            </summary>
+            <remarks>
+            An HTML entity decoder.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlEntityDecoder.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlEntityDecoder"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlEntityDecoder"/>.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlEntityDecoder.Push(System.Char)">
+            <summary>
+            Push the specified character into the HTML entity decoder.
+            </summary>
+            <remarks>
+            <para>Pushes the specified character into the HTML entity decoder.</para>
+            <para>The first character pushed MUST be the '&amp;' character.</para>
+            </remarks>
+            <returns><c>true</c> if the character was accepted; otherwise, <c>false</c>.</returns>
+            <param name="c">The character.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="c"/> is the first character being pushed and was not the '&amp;' character.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlEntityDecoder.GetValue">
+            <summary>
+            Get the decoded entity value.
+            </summary>
+            <remarks>
+            Gets the decoded entity value.
+            </remarks>
+            <returns>The value.</returns>
+        </member>
+        <member name="M:HtmlKit.HtmlEntityDecoder.Reset">
+            <summary>
+            Reset the entity decoder.
+            </summary>
+            <remarks>
+            Resets the entity decoder.
+            </remarks>
+        </member>
+        <member name="T:HtmlKit.HtmlNamespace">
+            <summary>
+            An HTML namespace.
+            </summary>
+            <remarks>
+            An HTML namespace.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlNamespace.Html">
+            <summary>
+            The namespace is "http://www.w3.org/1999/xhtml".
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlNamespace.MathML">
+            <summary>
+            The namespace is "http://www.w3.org/1998/Math/MathML".
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlNamespace.Svg">
+            <summary>
+            The namespace is "http://www.w3.org/2000/svg".
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlNamespace.XLink">
+            <summary>
+            The namespace is "http://www.w3.org/1999/xlink".
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlNamespace.Xml">
+            <summary>
+            The namespace is "http://www.w3.org/XML/1998/namespace".
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlNamespace.XmlNS">
+            <summary>
+            The namespace is "http://www.w3.org/2000/xmlns/".
+            </summary>
+        </member>
+        <member name="T:HtmlKit.HtmlNamespaceExtensions">
+            <summary>
+            <see cref="T:HtmlKit.HtmlNamespace"/> extension methods.
+            </summary>
+            <remarks>
+            <see cref="T:HtmlKit.HtmlNamespace"/> extension methods.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlNamespaceExtensions.ToNamespaceUrl(HtmlKit.HtmlNamespace)">
+            <summary>
+            Converts the enum value into the equivalent namespace url.
+            </summary>
+            <remarks>
+            Converts the enum value into the equivalent namespace url.
+            </remarks>
+            <returns>The tag name.</returns>
+            <param name="value">The enum value.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlNamespaceExtensions.ToHtmlNamespace(System.String)">
+            <summary>
+            Converts the tag name into the equivalent tag id.
+            </summary>
+            <remarks>
+            Converts the tag name into the equivalent tag id.
+            </remarks>
+            <returns>The tag id.</returns>
+            <param name="ns">The namespace.</param>
+        </member>
+        <member name="T:HtmlKit.HtmlTagId">
+            <summary>
+            HTML tag identifiers.
+            </summary>
+            <remarks>
+            HTML tag identifiers.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Unknown">
+            <summary>
+            An unknown HTML tag identifier.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.A">
+            <summary>
+            The HTML &lt;a&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Abbr">
+            <summary>
+            The HTML &lt;abbr&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Acronym">
+            <summary>
+            The HTML &lt;acronym&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Address">
+            <summary>
+            The HTML &lt;address&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Applet">
+            <summary>
+            The HTML &lt;applet&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Area">
+            <summary>
+            The HTML &lt;area&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Article">
+            <summary>
+            The HTML &lt;article&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Aside">
+            <summary>
+            The HTML &lt;aside&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Audio">
+            <summary>
+            The HTML &lt;audio&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.B">
+            <summary>
+            The HTML &lt;b&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Base">
+            <summary>
+            The HTML &lt;base&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.BaseFont">
+            <summary>
+            The HTML &lt;basefont&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Bdi">
+            <summary>
+            The HTML &lt;bdi&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Bdo">
+            <summary>
+            The HTML &lt;bdo&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.BGSound">
+            <summary>
+            The HTML &lt;bgsound&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Big">
+            <summary>
+            The HTML &lt;big&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Blink">
+            <summary>
+            The HTML &lt;blink&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.BlockQuote">
+            <summary>
+            The HTML &lt;blockquote&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Body">
+            <summary>
+            The HTML &lt;body&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Br">
+            <summary>
+            The HTML &lt;br&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Button">
+            <summary>
+            The HTML &lt;button&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Canvas">
+            <summary>
+            The HTML &lt;canvas&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Caption">
+            <summary>
+            The HTML &lt;caption&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Center">
+            <summary>
+            The HTML &lt;center&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Cite">
+            <summary>
+            The HTML &lt;cite&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Code">
+            <summary>
+            The HTML &lt;code&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Col">
+            <summary>
+            The HTML &lt;col&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.ColGroup">
+            <summary>
+            The HTML &lt;colgroup&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Command">
+            <summary>
+            The HTML &lt;command&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Comment">
+            <summary>
+            The HTML comment tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.DataList">
+            <summary>
+            The HTML &lt;datalist&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.DD">
+            <summary>
+            The HTML &lt;dd&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Del">
+            <summary>
+            The HTML &lt;del&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Details">
+            <summary>
+            The HTML &lt;details&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Dfn">
+            <summary>
+            The HTML &lt;dfn&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Dialog">
+            <summary>
+            The HTML &lt;dialog&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Dir">
+            <summary>
+            The HTML &lt;dir&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Div">
+            <summary>
+            The HTML &lt;div&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.DL">
+            <summary>
+            The HTML &lt;dl&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.DT">
+            <summary>
+            The HTML &lt;dt&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.EM">
+            <summary>
+            The HTML &lt;em&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Embed">
+            <summary>
+            The HTML &lt;embed&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.FieldSet">
+            <summary>
+            The HTML &lt;fieldset&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.FigCaption">
+            <summary>
+            The HTML &lt;figcaption&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Figure">
+            <summary>
+            The HTML &lt;figure&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Font">
+            <summary>
+            The HTML &lt;font&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Footer">
+            <summary>
+            The HTML &lt;footer&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Form">
+            <summary>
+            The HTML &lt;form&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Frame">
+            <summary>
+            The HTML &lt;frame&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.FrameSet">
+            <summary>
+            The HTML &lt;frameset&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.H1">
+            <summary>
+            The HTML &lt;h1&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.H2">
+            <summary>
+            The HTML &lt;h2&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.H3">
+            <summary>
+            The HTML &lt;h3&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.H4">
+            <summary>
+            The HTML &lt;h4&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.H5">
+            <summary>
+            The HTML &lt;h5&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.H6">
+            <summary>
+            The HTML &lt;h6&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Head">
+            <summary>
+            The HTML &lt;head&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Header">
+            <summary>
+            The HTML &lt;header&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.HR">
+            <summary>
+            The HTML &lt;hr&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Html">
+            <summary>
+            The HTML &lt;html&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.I">
+            <summary>
+            The HTML &lt;i&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.IFrame">
+            <summary>
+            The HTML &lt;iframe&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Image">
+            <summary>
+            The HTML &lt;image&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Input">
+            <summary>
+            The HTML &lt;input&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Ins">
+            <summary>
+            The HTML &lt;ins&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.IsIndex">
+            <summary>
+            The HTML &lt;isindex&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Kbd">
+            <summary>
+            The HTML &lt;kbd&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Keygen">
+            <summary>
+            The HTML &lt;keygen&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Label">
+            <summary>
+            The HTML &lt;label&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Legend">
+            <summary>
+            The HTML &lt;legend&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.LI">
+            <summary>
+            The HTML &lt;li&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Link">
+            <summary>
+            The HTML &lt;link&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Listing">
+            <summary>
+            The HTML &lt;listing&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Main">
+            <summary>
+            The HTML &lt;main&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Map">
+            <summary>
+            The HTML &lt;map&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Mark">
+            <summary>
+            The HTML &lt;mark&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Marquee">
+            <summary>
+            The HTML &lt;marquee&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Menu">
+            <summary>
+            The HTML &lt;menu&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.MenuItem">
+            <summary>
+            The HTML &lt;menuitem&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Meta">
+            <summary>
+            The HTML &lt;meta&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Meter">
+            <summary>
+            The HTML &lt;meter&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Nav">
+            <summary>
+            The HTML &lt;nav&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.NextId">
+            <summary>
+            The HTML &lt;nextid&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.NoBR">
+            <summary>
+            The HTML &lt;nobr&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.NoEmbed">
+            <summary>
+            The HTML &lt;noembed&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.NoFrames">
+            <summary>
+            The HTML &lt;noframes&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.NoScript">
+            <summary>
+            The HTML &lt;noscript&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Object">
+            <summary>
+            The HTML &lt;object&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.OL">
+            <summary>
+            The HTML &lt;ol&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.OptGroup">
+            <summary>
+            The HTML &lt;optgroup&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Option">
+            <summary>
+            The HTML &lt;option&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Output">
+            <summary>
+            The HTML &lt;output&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.P">
+            <summary>
+            The HTML &lt;p&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Param">
+            <summary>
+            The HTML &lt;param&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.PlainText">
+            <summary>
+            The HTML &lt;plaintext&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Pre">
+            <summary>
+            The HTML &lt;pre&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Progress">
+            <summary>
+            The HTML &lt;progress&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Q">
+            <summary>
+            The HTML &lt;q&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.RP">
+            <summary>
+            The HTML &lt;rp&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.RT">
+            <summary>
+            The HTML &lt;rt&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Ruby">
+            <summary>
+            The HTML &lt;ruby&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.S">
+            <summary>
+            The HTML &lt;s&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Samp">
+            <summary>
+            The HTML &lt;samp&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Script">
+            <summary>
+            The HTML &lt;script&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Section">
+            <summary>
+            The HTML &lt;section&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Select">
+            <summary>
+            The HTML &lt;select&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Small">
+            <summary>
+            The HTML &lt;small&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Source">
+            <summary>
+            The HTML &lt;source&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Span">
+            <summary>
+            The HTML &lt;span&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Strike">
+            <summary>
+            The HTML &lt;strike&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Strong">
+            <summary>
+            The HTML &lt;strong&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Style">
+            <summary>
+            The HTML &lt;style&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Sub">
+            <summary>
+            The HTML &lt;sub&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Summary">
+            <summary>
+            The HTML &lt;summary&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Sup">
+            <summary>
+            The HTML &lt;sup&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Table">
+            <summary>
+            The HTML &lt;table&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.TBody">
+            <summary>
+            The HTML &lt;tbody&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.TD">
+            <summary>
+            The HTML &lt;td&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.TextArea">
+            <summary>
+            The HTML &lt;textarea&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Tfoot">
+            <summary>
+            The HTML &lt;tfoot&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.TH">
+            <summary>
+            The HTML &lt;th&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Thread">
+            <summary>
+            The HTML &lt;thread&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Time">
+            <summary>
+            The HTML &lt;time&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Title">
+            <summary>
+            The HTML &lt;title&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.TR">
+            <summary>
+            The HTML &lt;tr&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Track">
+            <summary>
+            The HTML &lt;track&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.TT">
+            <summary>
+            The HTML &lt;tt&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.U">
+            <summary>
+            The HTML &lt;u&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.UL">
+            <summary>
+            The HTML &lt;ul&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Var">
+            <summary>
+            The HTML &lt;var&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Video">
+            <summary>
+            The HTML &lt;video&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Wbr">
+            <summary>
+            The HTML &lt;wbr&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Xml">
+            <summary>
+            The HTML &lt;xml&gt; tag.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTagId.Xmp">
+            <summary>
+            The HTML &lt;xmp&gt; tag.
+            </summary>
+        </member>
+        <member name="T:HtmlKit.HtmlTagIdExtensions">
+            <summary>
+            <see cref="T:HtmlKit.HtmlTagId"/> extension methods.
+            </summary>
+            <remarks>
+            <see cref="T:HtmlKit.HtmlTagId"/> extension methods.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlTagIdExtensions.ToHtmlTagName(HtmlKit.HtmlTagId)">
+            <summary>
+            Converts the enum value into the equivalent tag name.
+            </summary>
+            <remarks>
+            Converts the enum value into the equivalent tag name.
+            </remarks>
+            <returns>The tag name.</returns>
+            <param name="value">The enum value.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTagIdExtensions.ToHtmlTagId(System.String)">
+            <summary>
+            Converts the tag name into the equivalent tag id.
+            </summary>
+            <remarks>
+            Converts the tag name into the equivalent tag id.
+            </remarks>
+            <returns>The tag id.</returns>
+            <param name="name">The tag name.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTagIdExtensions.IsEmptyElement(HtmlKit.HtmlTagId)">
+            <summary>
+            Determines whether or not the HTML tag is an empty element.
+            </summary>
+            <remarks>
+            Determines whether or not the HTML tag is an empty element.
+            </remarks>
+            <returns><c>true</c> if the tag is an empty element; otherwise, <c>false</c>.</returns>
+            <param name="id">Identifier.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTagIdExtensions.IsFormattingElement(HtmlKit.HtmlTagId)">
+            <summary>
+            Determines whether or not the HTML tag is a formatting element.
+            </summary>
+            <remarks>
+            Determines whether or not the HTML tag is a formatting element.
+            </remarks>
+            <returns><c>true</c> if the HTML tag is a formatting element; otherwise, <c>false</c>.</returns>
+            <param name="id">The HTML tag identifier.</param>
+        </member>
+        <member name="T:HtmlKit.HtmlToken">
+            <summary>
+            An abstract HTML token class.
+            </summary>
+            <remarks>
+            An abstract HTML token class.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlToken.#ctor(HtmlKit.HtmlTokenKind)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlToken"/>.
+            </remarks>
+            <param name="kind">The kind of token.</param>
+        </member>
+        <member name="P:HtmlKit.HtmlToken.Kind">
+            <summary>
+            Get the kind of HTML token that this object represents.
+            </summary>
+            <remarks>
+            Gets the kind of HTML token that this object represents.
+            </remarks>
+            <value>The kind of token.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the HTML token to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the HTML token to a <see cref="T:System.IO.TextWriter"/>.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlToken.ToString">
+            <summary>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:HtmlKit.HtmlToken"/>.
+            </summary>
+            <remarks>
+            Returns a <see cref="T:System.String"/> that represents the current <see cref="T:HtmlKit.HtmlToken"/>.
+            </remarks>
+            <returns>A <see cref="T:System.String"/> that represents the current <see cref="T:HtmlKit.HtmlToken"/>.</returns>
+        </member>
+        <member name="T:HtmlKit.HtmlCommentToken">
+            <summary>
+            An HTML comment token.
+            </summary>
+            <remarks>
+            An HTML comment token.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlCommentToken.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlCommentToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlCommentToken"/>.
+            </remarks>
+            <param name="comment">The comment text.</param>
+            <param name="bogus"><c>true</c> if the comment is bogus; otherwise, <c>false</c>.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="comment"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:HtmlKit.HtmlCommentToken.Comment">
+            <summary>
+            Get the comment.
+            </summary>
+            <remarks>
+            Gets the comment.
+            </remarks>
+            <value>The comment.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlCommentToken.IsBogusComment">
+            <summary>
+            Get whether or not the comment is a bogus comment.
+            </summary>
+            <remarks>
+            Gets whether or not the comment is a bogus comment.
+            </remarks>
+            <value><c>true</c> if the comment is bogus; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlCommentToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the HTML comment to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the HTML comment to a <see cref="T:System.IO.TextWriter"/>.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlDataToken">
+            <summary>
+            An HTML token constisting of character data.
+            </summary>
+            <remarks>
+            An HTML token consisting of character data.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlDataToken.#ctor(HtmlKit.HtmlTokenKind,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlDataToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlDataToken"/>.
+            </remarks>
+            <param name="kind">The kind of character data.</param>
+            <param name="data">The character data.</param>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="kind"/> is not a valid <see cref="T:HtmlKit.HtmlTokenKind"/>.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlDataToken.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlDataToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlDataToken"/>.
+            </remarks>
+            <param name="data">The character data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:HtmlKit.HtmlDataToken.Data">
+            <summary>
+            Get the character data.
+            </summary>
+            <remarks>
+            Gets the character data.
+            </remarks>
+            <value>The character data.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlDataToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the HTML character data to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the HTML character data to a <see cref="T:System.IO.TextWriter"/>,
+            encoding it if it isn't already encoded.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlCDataToken">
+            <summary>
+            An HTML token constisting of <c>[CDATA[</c>.
+            </summary>
+            <remarks>
+            An HTML token consisting of <c>[CDATA[</c>.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlCDataToken.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlCDataToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlCDataToken"/>.
+            </remarks>
+            <param name="data">The character data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlCDataToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the HTML character data to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the HTML character data to a <see cref="T:System.IO.TextWriter"/>,
+            encoding it if it isn't already encoded.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlScriptDataToken">
+            <summary>
+            An HTML token constisting of script data.
+            </summary>
+            <remarks>
+            An HTML token consisting of script data.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlScriptDataToken.#ctor(System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlScriptDataToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlScriptDataToken"/>.
+            </remarks>
+            <param name="data">The script data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlScriptDataToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the HTML script data to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the HTML script data to a <see cref="T:System.IO.TextWriter"/>,
+            encoding it if it isn't already encoded.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlTagToken">
+            <summary>
+            An HTML tag token.
+            </summary>
+            <remarks>
+            An HTML tag token.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlTagToken.#ctor(System.String,System.Collections.Generic.IEnumerable{HtmlKit.HtmlAttribute},System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlTagToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlTagToken"/>.
+            </remarks>
+            <param name="name">The name of the tag.</param>
+            <param name="attributes">The attributes.</param>
+            <param name="isEmptyElement"><c>true</c> if the tag is an empty element; otherwise, <c>false</c>.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="attributes"/> is <c>null</c>.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlTagToken.#ctor(System.String,System.Boolean)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlTagToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlTagToken"/>.
+            </remarks>
+            <param name="name">The name of the tag.</param>
+            <param name="isEndTag"><c>true</c> if the tag is an end tag; otherwise, <c>false</c>.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="name"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="P:HtmlKit.HtmlTagToken.Attributes">
+            <summary>
+            Get the attributes.
+            </summary>
+            <remarks>
+            Gets the attributes.
+            </remarks>
+            <value>The attributes.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTagToken.Id">
+            <summary>
+            Get the HTML tag identifier.
+            </summary>
+            <remarks>
+            Gets the HTML tag identifier.
+            </remarks>
+            <value>The HTML tag identifier.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTagToken.IsEmptyElement">
+            <summary>
+            Get whether or not the tag is an empty element.
+            </summary>
+            <remarks>
+            Gets whether or not the tag is an empty element.
+            </remarks>
+            <value><c>true</c> if the tag is an empty element; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTagToken.IsEndTag">
+            <summary>
+            Get whether or not the tag is an end tag.
+            </summary>
+            <remarks>
+            Gets whether or not the tag is an end tag.
+            </remarks>
+            <value><c>true</c> if the tag is an end tag; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTagToken.Name">
+            <summary>
+            Get the name of the tag.
+            </summary>
+            <remarks>
+            Gets the name of the tag.
+            </remarks>
+            <value>The name.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlTagToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the HTML tag to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the HTML tag to a <see cref="T:System.IO.TextWriter"/>.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlDocTypeToken">
+            <summary>
+            An HTML DOCTYPE token.
+            </summary>
+            <remarks>
+            An HTML DOCTYPE token.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlDocTypeToken.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlDocTypeToken"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlDocTypeToken"/>.
+            </remarks>
+        </member>
+        <member name="P:HtmlKit.HtmlDocTypeToken.ForceQuirksMode">
+            <summary>
+            Get whether or not quirks-mode should be forced.
+            </summary>
+            <remarks>
+            Gets whether or not quirks-mode should be forced.
+            </remarks>
+            <value><c>true</c> if quirks-mode should be forced; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlDocTypeToken.Name">
+            <summary>
+            Get or set the DOCTYPE name.
+            </summary>
+            <remarks>
+            Gets or sets the DOCTYPE name.
+            </remarks>
+            <value>The name.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlDocTypeToken.PublicIdentifier">
+            <summary>
+            Get or set the public identifier.
+            </summary>
+            <remarks>
+            Gets or sets the public identifier.
+            </remarks>
+            <value>The public identifier.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlDocTypeToken.PublicKeyword">
+            <summary>
+            Get the public keyword that was used.
+            </summary>
+            <remarks>
+            Gets the public keyword that was used.
+            </remarks>
+            <value>The public keyword or <c>null</c> if it wasn't used.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlDocTypeToken.SystemIdentifier">
+            <summary>
+            Get or set the system identifier.
+            </summary>
+            <remarks>
+            Gets or sets the system identifier.
+            </remarks>
+            <value>The system identifier.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlDocTypeToken.SystemKeyword">
+            <summary>
+            Get the system keyword that was used.
+            </summary>
+            <remarks>
+            Gets the system keyword that was used.
+            </remarks>
+            <value>The system keyword or <c>null</c> if it wasn't used.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlDocTypeToken.WriteTo(System.IO.TextWriter)">
+            <summary>
+            Write the DOCTYPE tag to a <see cref="T:System.IO.TextWriter"/>.
+            </summary>
+            <remarks>
+            Writes the DOCTYPE tag to a <see cref="T:System.IO.TextWriter"/>.
+            </remarks>
+            <param name="output">The output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlTokenKind">
+            <summary>
+            The kinds of tokens that the <see cref="T:HtmlKit.HtmlTokenizer"/> can emit.
+            </summary>
+            <remarks>
+            The kinds of tokens that the <see cref="T:HtmlKit.HtmlTokenizer"/> can emit.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenKind.CData">
+            <summary>
+            A token consisting of <c>[CDATA[</c>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenKind.Comment">
+            <summary>
+            An HTML comment token.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenKind.Data">
+            <summary>
+            A token consisting of character data.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenKind.DocType">
+            <summary>
+            An HTML DOCTYPE token.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenKind.ScriptData">
+            <summary>
+            A token consisting of script data.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenKind.Tag">
+            <summary>
+            An HTML tag token.
+            </summary>
+        </member>
+        <member name="T:HtmlKit.HtmlTokenizer">
+            <summary>
+            An HTML tokenizer.
+            </summary>
+            <remarks>
+            Tokenizes HTML text, emitting an <see cref="T:HtmlKit.HtmlToken"/> for each token it encounters.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.#ctor(System.IO.TextReader)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlTokenizer"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlTokenizer"/>.
+            </remarks>
+            <param name="reader">The <see cref="T:System.IO.TextReader"/>.</param>
+        </member>
+        <member name="P:HtmlKit.HtmlTokenizer.DecodeCharacterReferences">
+            <summary>
+            Get or set whether or not the tokenizer should decode character references.
+            </summary>
+            <remarks>
+            <para>Gets or sets whether or not the tokenizer should decode character references.</para>
+            <para>Note: Character references in attribute values will still be decoded even if this
+            value is set to <c>false</c>.</para>
+            </remarks>
+            <value><c>true</c> if character references should be decoded; otherwise, <c>false</c>.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTokenizer.HtmlNamespace">
+            <summary>
+            Get the current HTML namespace detected by the tokenizer.
+            </summary>
+            <remarks>
+            Gets the current HTML namespace detected by the tokenizer.
+            </remarks>
+            <value>The html namespace.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTokenizer.LineNumber">
+            <summary>
+            Gets the current line number.
+            </summary>
+            <remarks>
+            <para>This property is most commonly used for error reporting, but can be called
+            at any time. The starting value for this property is <c>1</c>.</para>
+            <para>Combined with <see cref="P:HtmlKit.HtmlTokenizer.LinePosition"/>, a value of <c>1,1</c> indicates
+            the start of the document.</para>
+            </remarks>
+            <value>The current line number.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTokenizer.LinePosition">
+            <summary>
+            Gets the current line position.
+            </summary>
+            <remarks>
+            <para>This property is most commonly used for error reporting, but can be called
+            at any time. The starting value for this property is <c>1</c>.</para>
+            <para>Combined with <see cref="P:HtmlKit.HtmlTokenizer.LineNumber"/>, a value of <c>1,1</c> indicates
+            the start of the document.</para>
+            </remarks>
+            <value>The current line number.</value>
+        </member>
+        <member name="P:HtmlKit.HtmlTokenizer.TokenizerState">
+            <summary>
+            Get the current state of the tokenizer.
+            </summary>
+            <remarks>
+            Gets the current state of the tokenizer.
+            </remarks>
+            <value>The current state of the tokenizer.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateDocType">
+            <summary>
+            Create a DOCTYPE token.
+            </summary>
+            <remarks>
+            Creates a DOCTYPE token.
+            </remarks>
+            <returns>The DOCTYPE token.</returns>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateCommentToken(System.String,System.Boolean)">
+            <summary>
+            Create an HTML comment token.
+            </summary>
+            <remarks>
+            Creates an HTML comment token.
+            </remarks>
+            <returns>The HTML comment token.</returns>
+            <param name="comment">The comment.</param>
+            <param name="bogus"><c>true</c> if the comment is bogus; otherwise, <c>false</c>.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateDataToken(System.String)">
+            <summary>
+            Create an HTML character data token.
+            </summary>
+            <remarks>
+            Creates an HTML character data token.
+            </remarks>
+            <returns>The HTML character data token.</returns>
+            <param name="data">The character data.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateCDataToken(System.String)">
+            <summary>
+            Create an HTML character data token.
+            </summary>
+            <remarks>
+            Creates an HTML character data token.
+            </remarks>
+            <returns>The HTML character data token.</returns>
+            <param name="data">The character data.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateScriptDataToken(System.String)">
+            <summary>
+            Create an HTML script data token.
+            </summary>
+            <remarks>
+            Creates an HTML script data token.
+            </remarks>
+            <returns>The HTML script data token.</returns>
+            <param name="data">The script data.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateTagToken(System.String,System.Boolean)">
+            <summary>
+            Create an HTML tag token.
+            </summary>
+            <remarks>
+            Creates an HTML tag token.
+            </remarks>
+            <returns>The HTML tag token.</returns>
+            <param name="name">The tag name.</param>
+            <param name="isEndTag"><c>true</c> if the tag is an end tag; otherwise, <c>false</c>.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.CreateAttribute(System.String)">
+            <summary>
+            Create an attribute.
+            </summary>
+            <remarks>
+            Creates an attribute.
+            </remarks>
+            <returns>The attribute.</returns>
+            <param name="name">THe attribute name.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlTokenizer.ReadNextToken(HtmlKit.HtmlToken@)">
+            <summary>
+            Reads the next token.
+            </summary>
+            <remarks>
+            Reads the next token.
+            </remarks>
+            <returns><c>true</c> if the next token was read; otherwise, <c>false</c>.</returns>
+            <param name="token">THe token that was read.</param>
+        </member>
+        <member name="T:HtmlKit.HtmlTokenizerState">
+            <summary>
+            The HTML tokenizer state.
+            </summary>
+            <remarks>
+            The HTML tokenizer state.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.Data">
+            <summary>
+            The data state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#data-state">
+            http://www.w3.org/TR/html5/syntax.html#data-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CharacterReferenceInData">
+            <summary>
+            The character reference in data state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#character-reference-in-data-state">
+            http://www.w3.org/TR/html5/syntax.html#character-reference-in-data-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RcData">
+            <summary>
+            The RCDATA state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rcdata-state">
+            http://www.w3.org/TR/html5/syntax.html#rcdata-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CharacterReferenceInRcData">
+            <summary>
+            The character reference in RCDATA state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#character-reference-in-rcdata-state">
+            http://www.w3.org/TR/html5/syntax.html#character-reference-in-rcdata-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RawText">
+            <summary>
+            The RAWTEXT state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rawtext-state">
+            http://www.w3.org/TR/html5/syntax.html#rawtext-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptData">
+            <summary>
+            The script data state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.PlainText">
+            <summary>
+            The PLAINTEXT state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#plaintext-state">
+            http://www.w3.org/TR/html5/syntax.html#plaintext-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.TagOpen">
+            <summary>
+            The tag open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#tag-open-state">
+            http://www.w3.org/TR/html5/syntax.html#tag-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.EndTagOpen">
+            <summary>
+            The end tag open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#end-tag-open-state">
+            http://www.w3.org/TR/html5/syntax.html#end-tag-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.TagName">
+            <summary>
+            The tag name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#tag-name-state">
+            http://www.w3.org/TR/html5/syntax.html#tag-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RcDataLessThan">
+            <summary>
+            The RCDATA less-than state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rcdata-less-than-sign-state">
+            http://www.w3.org/TR/html5/syntax.html#rcdata-less-than-sign-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RcDataEndTagOpen">
+            <summary>
+            The RCDATA end tag open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rcdata-end-tag-open-state">
+            http://www.w3.org/TR/html5/syntax.html#rcdata-end-tag-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RcDataEndTagName">
+            <summary>
+            The RCDATA end tag name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rcdata-end-tag-name-state">
+            http://www.w3.org/TR/html5/syntax.html#rcdata-end-tag-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RawTextLessThan">
+            <summary>
+            The RAWTEXT less-than state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rawtext-less-than-sign-state">
+            http://www.w3.org/TR/html5/syntax.html#rawtext-less-than-sign-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RawTextEndTagOpen">
+            <summary>
+            The RAWTEXT end tag open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rawtext-end-tag-open-state">
+            http://www.w3.org/TR/html5/syntax.html#rawtext-end-tag-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.RawTextEndTagName">
+            <summary>
+            The RAWTEXT end tag name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#rawtext-end-tag-name-state">
+            http://www.w3.org/TR/html5/syntax.html#rawtext-end-tag-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataLessThan">
+            <summary>
+            The script data less-than state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-less-than-sign-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-less-than-sign-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEndTagOpen">
+            <summary>
+            The script data end tag open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-end-tag-open-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-end-tag-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEndTagName">
+            <summary>
+            The script data end tag name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-end-tag-name-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-end-tag-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapeStart">
+            <summary>
+            The script data escape start state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escape-start-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escape-start-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapeStartDash">
+            <summary>
+            The script data escape start state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escape-start-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escape-start-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscaped">
+            <summary>
+            The script data escaped state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escaped-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escaped-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapedDash">
+            <summary>
+            The script data escaped dash state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escaped-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escaped-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapedDashDash">
+            <summary>
+            The script data escaped dash dash state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escaped-dash-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escaped-dash-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapedLessThan">
+            <summary>
+            The script data escaped less-than state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escaped-less-than-sign-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escaped-less-than-sign-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapedEndTagOpen">
+            <summary>
+            The script data escaped end tag open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escaped-end-tag-open-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escaped-end-tag-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataEscapedEndTagName">
+            <summary>
+            The script data escaped end tag name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-escaped-end-tag-name-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-escaped-end-tag-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataDoubleEscapeStart">
+            <summary>
+            The script data double escape start state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-double-escape-start-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-double-escape-start-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataDoubleEscaped">
+            <summary>
+            The script data double escaped state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataDoubleEscapedDash">
+            <summary>
+            The script data double escaped dash state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataDoubleEscapedDashDash">
+            <summary>
+            The script data double escaped dash dash state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-dash-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-dash-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataDoubleEscapedLessThan">
+            <summary>
+            The script data double escaped less-than state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-less-than-sign-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-double-escaped-less-than-sign-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.ScriptDataDoubleEscapeEnd">
+            <summary>
+            The script data double escape end state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#script-data-double-escape-end-state">
+            http://www.w3.org/TR/html5/syntax.html#script-data-double-escape-end-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BeforeAttributeName">
+            <summary>
+            The before attribute name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#before-attribute-name-state">
+            http://www.w3.org/TR/html5/syntax.html#before-attribute-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AttributeName">
+            <summary>
+            The attribute name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#attribute-name-state">
+            http://www.w3.org/TR/html5/syntax.html#attribute-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterAttributeName">
+            <summary>
+            The after attribute name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-attribute-name-state">
+            http://www.w3.org/TR/html5/syntax.html#after-attribute-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BeforeAttributeValue">
+            <summary>
+            The beforw attribute value state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#before-attribute-value-state">
+            http://www.w3.org/TR/html5/syntax.html#before-attribute-value-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AttributeValueQuoted">
+            <summary>
+            The attribute value quoted state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#attribute-value-(double-quoted)-state">
+            http://www.w3.org/TR/html5/syntax.html#attribute-value-(double-quoted)-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AttributeValueUnquoted">
+            <summary>
+            The attribute value unquoted state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#attribute-value-(unquoted)-state">
+            http://www.w3.org/TR/html5/syntax.html#attribute-value-(unquoted)-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CharacterReferenceInAttributeValue">
+            <summary>
+            The character reference in attribute value state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#character-reference-in-attribute-value-state">
+            http://www.w3.org/TR/html5/syntax.html#character-reference-in-attribute-value-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterAttributeValueQuoted">
+            <summary>
+            The after attribute value quoted state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-attribute-value-(quoted)-state">
+            http://www.w3.org/TR/html5/syntax.html#after-attribute-value-(quoted)-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.SelfClosingStartTag">
+            <summary>
+            The self-closing start tag state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#self-closing-start-tag-state">
+            http://www.w3.org/TR/html5/syntax.html#self-closing-start-tag-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BogusComment">
+            <summary>
+            The bogus comment state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#bogus-comment-state">
+            http://www.w3.org/TR/html5/syntax.html#bogus-comment-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.MarkupDeclarationOpen">
+            <summary>
+            The markup declaration open state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#markup-declaration-open-state">
+            http://www.w3.org/TR/html5/syntax.html#markup-declaration-open-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CommentStart">
+            <summary>
+            The comment start state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#comment-start-state">
+            http://www.w3.org/TR/html5/syntax.html#comment-start-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CommentStartDash">
+            <summary>
+            The comment start dash state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#comment-start-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#comment-start-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.Comment">
+            <summary>
+            The comment state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#comment-state">
+            http://www.w3.org/TR/html5/syntax.html#comment-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CommentEndDash">
+            <summary>
+            The comment end dash state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#comment-end-dash-state">
+            http://www.w3.org/TR/html5/syntax.html#comment-end-dash-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CommentEnd">
+            <summary>
+            The comment end state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#comment-end-state">
+            http://www.w3.org/TR/html5/syntax.html#comment-end-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CommentEndBang">
+            <summary>
+            The comment end bang state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#comment-end-bang-state">
+            http://www.w3.org/TR/html5/syntax.html#comment-end-bang-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.DocType">
+            <summary>
+            The DOCTYPE state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#doctype-state">
+            http://www.w3.org/TR/html5/syntax.html#doctype-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BeforeDocTypeName">
+            <summary>
+            The before DOCTYPE name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#before-doctype-name-state">
+            http://www.w3.org/TR/html5/syntax.html#before-doctype-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.DocTypeName">
+            <summary>
+            The DOCTYPE name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#doctype-name-state">
+            http://www.w3.org/TR/html5/syntax.html#doctype-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterDocTypeName">
+            <summary>
+            The after DOCTYPE name state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-doctype-name-state">
+            http://www.w3.org/TR/html5/syntax.html#after-doctype-name-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterDocTypePublicKeyword">
+            <summary>
+            The after DOCTYPE public keyword state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-doctype-public-keyword-state">
+            http://www.w3.org/TR/html5/syntax.html#after-doctype-public-keyword-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BeforeDocTypePublicIdentifier">
+            <summary>
+            The before DOCTYPE public identifier state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#before-doctype-public-identifier-state">
+            http://www.w3.org/TR/html5/syntax.html#before-doctype-public-identifier-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.DocTypePublicIdentifierQuoted">
+            <summary>
+            The DOCTYPE public identifier quoted state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#doctype-public-identifier-(double-quoted)-state">
+            http://www.w3.org/TR/html5/syntax.html#doctype-public-identifier-(double-quoted)-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterDocTypePublicIdentifier">
+            <summary>
+            The after DOCTYPE public identifier state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-doctype-public-identifier-state">
+            http://www.w3.org/TR/html5/syntax.html#after-doctype-public-identifier-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BetweenDocTypePublicAndSystemIdentifiers">
+            <summary>
+            The between DOCTYPE public and system identifiers state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#between-doctype-public-and-system-identifiers-state">
+            http://www.w3.org/TR/html5/syntax.html#between-doctype-public-and-system-identifiers-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterDocTypeSystemKeyword">
+            <summary>
+            The after DOCTYPE system keyword state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-doctype-system-keyword-state">
+            http://www.w3.org/TR/html5/syntax.html#after-doctype-system-keyword-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BeforeDocTypeSystemIdentifier">
+            <summary>
+            The before DOCTYPE system identifier state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#before-doctype-system-identifier-state">
+            http://www.w3.org/TR/html5/syntax.html#before-doctype-system-identifier-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.DocTypeSystemIdentifierQuoted">
+            <summary>
+            The DOCTYPE system identifier quoted state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#doctype-system-identifier-(double-quoted)-state">
+            http://www.w3.org/TR/html5/syntax.html#doctype-system-identifier-(double-quoted)-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.AfterDocTypeSystemIdentifier">
+            <summary>
+            The after DOCTYPE system identifier state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#after-doctype-system-identifier-state">
+            http://www.w3.org/TR/html5/syntax.html#after-doctype-system-identifier-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.BogusDocType">
+            <summary>
+            The bogus DOCTYPE state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#bogus-doctype-state">
+            http://www.w3.org/TR/html5/syntax.html#bogus-doctype-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.CDataSection">
+            <summary>
+            The CDATA section state as described at
+            <a href="http://www.w3.org/TR/html5/syntax.html#cdata-section-state">
+            http://www.w3.org/TR/html5/syntax.html#cdata-section-state</a>.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlTokenizerState.EndOfFile">
+            <summary>
+            The end of file state.
+            </summary>
+        </member>
+        <member name="T:HtmlKit.HtmlUtils">
+            <summary>
+            A collection of HTML-related utility methods.
+            </summary>
+            <remarks>
+            A collection of HTML-related utility methods.
+            </remarks>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:HtmlKit.HtmlUtils.HtmlAttributeEncode(System.IO.TextWriter,System.Char[],System.Int32,System.Int32,System.Char)" -->
+        <member name="M:HtmlKit.HtmlUtils.HtmlAttributeEncode(System.Char[],System.Int32,System.Int32,System.Char)">
+            <summary>
+            Encode an HTML attribute value.
+            </summary>
+            <remarks>
+            Encodes an HTML attribute value.
+            </remarks>
+            <returns>The encoded attribute value.</returns>
+            <param name="value">The attribute value to encode.</param>
+            <param name="startIndex">The starting index of the attribute value.</param>
+            <param name="count">The number of characters in the attribute value.</param>
+            <param name="quote">The character to use for quoting the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the value.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="quote"/> is not a valid quote character.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlAttributeEncode(System.IO.TextWriter,System.String,System.Int32,System.Int32,System.Char)">
+            <summary>
+            Encode an HTML attribute value.
+            </summary>
+            <remarks>
+            Encodes an HTML attribute value.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="value">The attribute value to encode.</param>
+            <param name="startIndex">The starting index of the attribute value.</param>
+            <param name="count">The number of characters in the attribute value.</param>
+            <param name="quote">The character to use for quoting the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="value"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the value.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="quote"/> is not a valid quote character.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlAttributeEncode(System.IO.TextWriter,System.String,System.Char)">
+            <summary>
+            Encode an HTML attribute value.
+            </summary>
+            <remarks>
+            Encodes an HTML attribute value.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="value">The attribute value to encode.</param>
+            <param name="quote">The character to use for quoting the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="value"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="quote"/> is not a valid quote character.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlAttributeEncode(System.String,System.Int32,System.Int32,System.Char)">
+            <summary>
+            Encode an HTML attribute value.
+            </summary>
+            <remarks>
+            Encodes an HTML attribute value.
+            </remarks>
+            <returns>The encoded attribute value.</returns>
+            <param name="value">The attribute value to encode.</param>
+            <param name="startIndex">The starting index of the attribute value.</param>
+            <param name="count">The number of characters in the attribute value.</param>
+            <param name="quote">The character to use for quoting the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the value.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="quote"/> is not a valid quote character.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlAttributeEncode(System.String,System.Char)">
+            <summary>
+            Encode an HTML attribute value.
+            </summary>
+            <remarks>
+            Encodes an HTML attribute value.
+            </remarks>
+            <returns>The encoded attribute value.</returns>
+            <param name="value">The attribute value to encode.</param>
+            <param name="quote">The character to use for quoting the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="quote"/> is not a valid quote character.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlEncode(System.IO.TextWriter,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Encode HTML character data.
+            </summary>
+            <remarks>
+            Encodes HTML character data.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="data">The character data to encode.</param>
+            <param name="startIndex">The starting index of the character data.</param>
+            <param name="count">The number of characters in the data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="data"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the data.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlEncode(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Encode HTML character data.
+            </summary>
+            <remarks>
+            Encodes HTML character data.
+            </remarks>
+            <returns>THe encoded character data.</returns>
+            <param name="data">The character data to encode.</param>
+            <param name="startIndex">The starting index of the character data.</param>
+            <param name="count">The number of characters in the data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the data.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlEncode(System.IO.TextWriter,System.String,System.Int32,System.Int32)">
+            <summary>
+            Encode HTML character data.
+            </summary>
+            <remarks>
+            Encodes HTML character data.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="data">The character data to encode.</param>
+            <param name="startIndex">The starting index of the character data.</param>
+            <param name="count">The number of characters in the data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="data"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the data.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlEncode(System.IO.TextWriter,System.String)">
+            <summary>
+            Encode HTML character data.
+            </summary>
+            <remarks>
+            Encodes HTML character data.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="data">The character data to encode.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="data"/> is <c>null</c>.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlEncode(System.String,System.Int32,System.Int32)">
+            <summary>
+            Encode HTML character data.
+            </summary>
+            <remarks>
+            Encodes HTML character data.
+            </remarks>
+            <returns>THe encoded character data.</returns>
+            <param name="data">The character data to encode.</param>
+            <param name="startIndex">The starting index of the character data.</param>
+            <param name="count">The number of characters in the data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the data.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlEncode(System.String)">
+            <summary>
+            Encode HTML character data.
+            </summary>
+            <remarks>
+            Encodes HTML character data.
+            </remarks>
+            <returns>THe encoded character data.</returns>
+            <param name="data">The character data to encode.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlDecode(System.IO.TextWriter,System.String,System.Int32,System.Int32)">
+            <summary>
+            Decode HTML character data.
+            </summary>
+            <remarks>
+            Decodes HTML character data.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="data">The character data to decode.</param>
+            <param name="startIndex">The starting index of the character data.</param>
+            <param name="count">The number of characters in the data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="data"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the data.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlDecode(System.IO.TextWriter,System.String)">
+            <summary>
+            Decode HTML character data.
+            </summary>
+            <remarks>
+            Decodes HTML character data.
+            </remarks>
+            <param name="output">The <see cref="T:System.IO.TextWriter"/> to output the result.</param>
+            <param name="data">The character data to decode.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="output"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="data"/> is <c>null</c>.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlDecode(System.String,System.Int32,System.Int32)">
+            <summary>
+            Decode HTML character data.
+            </summary>
+            <remarks>
+            Decodes HTML character data.
+            </remarks>
+            <returns>The decoded character data.</returns>
+            <param name="data">The character data to decode.</param>
+            <param name="startIndex">The starting index of the character data.</param>
+            <param name="count">The number of characters in the data.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="startIndex"/> and <paramref name="count"/> do not specify
+            a valid range in the data.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlUtils.HtmlDecode(System.String)">
+            <summary>
+            Decode HTML character data.
+            </summary>
+            <remarks>
+            Decodes HTML character data.
+            </remarks>
+            <returns>The decoded character data.</returns>
+            <param name="data">The character data to decode.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="data"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="T:HtmlKit.HtmlWriter">
+            <summary>
+            An HTML writer.
+            </summary>
+            <remarks>
+            An HTML writer.
+            </remarks>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.#ctor(System.IO.Stream,System.Text.Encoding)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlWriter"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlWriter"/>.
+            </remarks>
+            <param name="stream">The output stream.</param>
+            <param name="encoding">The encoding to use for the output.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="stream"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="encoding"/> is <c>null</c>.</para>
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.#ctor(System.IO.TextWriter)">
+            <summary>
+            Initializes a new instance of the <see cref="T:HtmlKit.HtmlWriter"/> class.
+            </summary>
+            <remarks>
+            Creates a new <see cref="T:HtmlKit.HtmlWriter"/>.
+            </remarks>
+            <param name="output">The output text writer.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="output"/> is <c>null</c>.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.Finalize">
+            <summary>
+            Releas unmanaged resources and perform other cleanup operations before the
+            <see cref="T:HtmlKit.HtmlWriter"/> is reclaimed by garbage collection.
+            </summary>
+            <remarks>
+            Releases unmanaged resources and performs other cleanup operations before the
+            <see cref="T:HtmlKit.HtmlWriter"/> is reclaimed by garbage collection.
+            </remarks>
+        </member>
+        <member name="P:HtmlKit.HtmlWriter.WriterState">
+            <summary>
+            Get the current state of the writer.
+            </summary>
+            <remarks>
+            Gets the current state of the writer.
+            </remarks>
+            <value>The state of the writer.</value>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttribute(HtmlKit.HtmlAttributeId,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Write the attribute to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute to the output stream.
+            </remarks>
+            <param name="id">The attribute identifier.</param>
+            <param name="buffer">A buffer containing the attribute value.</param>
+            <param name="index">The starting index of the attribute value.</param>
+            <param name="count">The number of characters in the attribute value.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="id"/> is not a valid HTML attribute identifier.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero or greater than the length of
+            <paramref name="buffer"/>.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> and <paramref name="count"/> do not specify
+            a valid range in the <paramref name="buffer"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttribute(System.String,System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Write the attribute to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute to the output stream.
+            </remarks>
+            <param name="name">The attribute name.</param>
+            <param name="buffer">A buffer containing the attribute value.</param>
+            <param name="index">The starting index of the attribute value.</param>
+            <param name="count">The number of characters in the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="buffer"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero or greater than the length of
+            <paramref name="buffer"/>.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> and <paramref name="count"/> do not specify
+            a valid range in the <paramref name="buffer"/>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="name"/> is an invalid attribute name.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttribute(HtmlKit.HtmlAttributeId,System.String)">
+            <summary>
+            Write the attribute to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute to the output stream.
+            </remarks>
+            <param name="id">The attribute identifier.</param>
+            <param name="value">The attribute value.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="id"/> is not a valid HTML attribute identifier.
+            </exception>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttribute(System.String,System.String)">
+            <summary>
+            Write the attribute to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute to the output stream.
+            </remarks>
+            <param name="name">The attribute name.</param>
+            <param name="value">The attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <para><paramref name="name"/> is <c>null</c>.</para>
+            <para>-or-</para>
+            <para><paramref name="value"/> is <c>null</c>.</para>
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="name"/> is an invalid attribute name.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttribute(HtmlKit.HtmlAttribute)">
+            <summary>
+            Write the attribute to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute to the output stream.
+            </remarks>
+            <param name="attribute">The attribute.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="attribute"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttributeName(HtmlKit.HtmlAttributeId)">
+            <summary>
+            Write the attribute name to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute name to the output stream.
+            </remarks>
+            <param name="id">The attribute identifier.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="id"/> is not a valid HTML attribute identifier.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttributeName(System.String)">
+            <summary>
+            Write the attribute name to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute name to the output stream.
+            </remarks>
+            <param name="name">The attribute name.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="name"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="name"/> is an invalid attribute name.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attributes.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttributeValue(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Write the attribute value to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute value to the output stream.
+            </remarks>
+            <param name="buffer">A buffer containing the attribute value.</param>
+            <param name="index">The starting index of the attribute value.</param>
+            <param name="count">The number of characters in the attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero or greater than the length of
+            <paramref name="buffer"/>.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> and <paramref name="count"/> do not specify
+            a valid range in the <paramref name="buffer"/>.</para>
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attribute values.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteAttributeValue(System.String)">
+            <summary>
+            Write the attribute value to the output stream.
+            </summary>
+            <remarks>
+            Writes the attribute value to the output stream.
+            </remarks>
+            <param name="value">The attribute value.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.InvalidOperationException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not in a state that allows writing attribute values.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteEmptyElementTag(HtmlKit.HtmlTagId)">
+            <summary>
+            Write an empty element tag.
+            </summary>
+            <remarks>
+            Writes an empty element tag.
+            </remarks>
+            <param name="id">The HTML tag identifier.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="id"/> is not a valid HTML tag identifier.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteEmptyElementTag(System.String)">
+            <summary>
+            Write an empty element tag.
+            </summary>
+            <remarks>
+            Writes an empty element tag.
+            </remarks>
+            <param name="name">The name of the HTML tag.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="name"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="name"/> is not a valid HTML tag.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteEndTag(HtmlKit.HtmlTagId)">
+            <summary>
+            Write an end tag.
+            </summary>
+            <remarks>
+            Writes an end tag.
+            </remarks>
+            <param name="id">The HTML tag identifier.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="id"/> is not a valid HTML tag identifier.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteEndTag(System.String)">
+            <summary>
+            Write an end tag.
+            </summary>
+            <remarks>
+            Writes an end tag.
+            </remarks>
+            <param name="name">The name of the HTML tag.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="name"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="name"/> is not a valid HTML tag.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteMarkupText(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Write a buffer containing HTML markup directly to the output, without escaping special characters.
+            </summary>
+            <remarks>
+            Writes a buffer containing HTML markup directly to the output, without escaping special characters.
+            </remarks>
+            <param name="buffer">The buffer containing HTML markup.</param>
+            <param name="index">The index of the first character to write.</param>
+            <param name="count">The number of characters to write.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero or greater than the length of
+            <paramref name="buffer"/>.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> and <paramref name="count"/> do not specify
+            a valid range in the <paramref name="buffer"/>.</para>
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteMarkupText(System.String)">
+            <summary>
+            Write a string containing HTML markup directly to the output, without escaping special characters.
+            </summary>
+            <remarks>
+            Writes a string containing HTML markup directly to the output, without escaping special characters.
+            </remarks>
+            <param name="value">The string containing HTML markup.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteStartTag(HtmlKit.HtmlTagId)">
+            <summary>
+            Write a start tag.
+            </summary>
+            <remarks>
+            Writes a start tag.
+            </remarks>
+            <param name="id">The HTML tag identifier.</param>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="id"/> is not a valid HTML tag identifier.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteStartTag(System.String)">
+            <summary>
+            Write a start tag.
+            </summary>
+            <remarks>
+            Writes a start tag.
+            </remarks>
+            <param name="name">The name of the HTML tag.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="name"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            <paramref name="name"/> is not a valid HTML tag.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteText(System.Char[],System.Int32,System.Int32)">
+            <summary>
+            Write text to the output stream, escaping special characters.
+            </summary>
+            <remarks>
+            Writes text to the output stream, escaping special characters.
+            </remarks>
+            <param name="buffer">The text buffer.</param>
+            <param name="index">The index of the first character to write.</param>
+            <param name="count">The number of characters to write.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="buffer"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ArgumentOutOfRangeException">
+            <para><paramref name="index"/> is less than zero or greater than the length of
+            <paramref name="buffer"/>.</para>
+            <para>-or-</para>
+            <para><paramref name="index"/> and <paramref name="count"/> do not specify
+            a valid range in the <paramref name="buffer"/>.</para>
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteText(System.String)">
+            <summary>
+            Write text to the output stream, escaping special characters.
+            </summary>
+            <remarks>
+            Writes text to the output stream, escaping special characters.
+            </remarks>
+            <param name="value">The text.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="value"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.WriteToken(HtmlKit.HtmlToken)">
+            <summary>
+            Write a token to the output stream.
+            </summary>
+            <remarks>
+            Writes a token that was emitted by the <see cref="T:HtmlKit.HtmlTokenizer"/>
+            to the output stream.
+            </remarks>
+            <param name="token">The HTML token.</param>
+            <exception cref="T:System.ArgumentNullException">
+            <paramref name="token"/> is <c>null</c>.
+            </exception>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.Flush">
+            <summary>
+            Flush any remaining state to the output stream.
+            </summary>
+            <remarks>
+            Flushes any remaining state to the output stream.
+            </remarks>
+            <exception cref="T:System.ObjectDisposedException">
+            The <see cref="T:HtmlKit.HtmlWriter"/> has been disposed.
+            </exception>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.Dispose(System.Boolean)">
+            <summary>
+            Releases the unmanaged resources used by the <see cref="T:HtmlKit.HtmlWriter"/> and
+            optionally releases the managed resources.
+            </summary>
+            <remarks>
+            Releases any unmanaged resources used by the <see cref="T:HtmlKit.HtmlWriter"/> and
+            optionally releases the managed resources.
+            </remarks>
+            <param name="disposing"><c>true</c> to release both managed and unmanaged resources;
+            <c>false</c> to release only the unmanaged resources.</param>
+        </member>
+        <member name="M:HtmlKit.HtmlWriter.Dispose">
+            <summary>
+            Releases all resource used by the <see cref="T:HtmlKit.HtmlWriter"/> object.
+            </summary>
+            <remarks>Call <see cref="M:HtmlKit.HtmlWriter.Dispose"/> when you are finished using the <see cref="T:HtmlKit.HtmlWriter"/>. The
+            <see cref="M:HtmlKit.HtmlWriter.Dispose"/> method leaves the <see cref="T:HtmlKit.HtmlWriter"/> in an unusable state. After calling
+            <see cref="M:HtmlKit.HtmlWriter.Dispose"/>, you must release all references to the <see cref="T:HtmlKit.HtmlWriter"/> so the garbage
+            collector can reclaim the memory that the <see cref="T:HtmlKit.HtmlWriter"/> was occupying.</remarks>
+        </member>
+        <member name="T:HtmlKit.HtmlWriterState">
+            <summary>
+            An enumeration of possible states of a <see cref="T:HtmlKit.HtmlWriter"/>.
+            </summary>
+            <remarks>
+            An enumeration of possible states of a <see cref="T:HtmlKit.HtmlWriter"/>.
+            </remarks>
+        </member>
+        <member name="F:HtmlKit.HtmlWriterState.Default">
+            <summary>
+            The <see cref="T:HtmlKit.HtmlWriter"/> is not within a tag. In this state, the <see cref="T:HtmlKit.HtmlWriter"/>
+            can only write a tag or text.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlWriterState.Tag">
+            <summary>
+            The <see cref="T:HtmlKit.HtmlWriter"/> is inside a tag but has not started to write an attribute. In this
+            state, the <see cref="T:HtmlKit.HtmlWriter"/> can write an attribute, another tag, or text.
+            </summary>
+        </member>
+        <member name="F:HtmlKit.HtmlWriterState.Attribute">
+            <summary>
+            The <see cref="T:HtmlKit.HtmlWriter"/> is inside an attribute. In this state, the <see cref="T:HtmlKit.HtmlWriter"/>
+            can append a value to the current attribute, start the next attribute, or write another tag or text.
+            </summary>
+        </member>
+    </members>
+</doc>
