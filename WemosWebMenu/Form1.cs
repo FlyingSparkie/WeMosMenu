@@ -18,13 +18,7 @@ namespace WemosWebMenu
         { }
 
         private int counter, tempCounter;
-
-        /* private string copyto;
-         private bool toPaste;*/
-        //private bool wemosIpSel = false;
-        //private string ts;
         private bool ExceptionFound;
-        // private object toString;
 
         public WemosSelPage()
         {
@@ -46,6 +40,7 @@ namespace WemosWebMenu
             {
                 this.label1.BackColor = System.Drawing.Color.Green;
                 this.label1.Text = ("On");
+                textBoxEntry.Text = "192.168.4.1/GREEN";
             }
             else
             {
@@ -54,6 +49,7 @@ namespace WemosWebMenu
                     this.label1.BackColor = System.Drawing.Color.Red;
                     //this.label1.BackColor = System.Drawing.Color.;
                     this.label1.Text = ("Off");
+                    textBoxEntry.Text = "192.168.4.1/GREEN";
                 }
             }
         }
@@ -62,6 +58,8 @@ namespace WemosWebMenu
             this.dataStatusLabel.BackColor = System.Drawing.Color.Empty;
             this.textBoxEntry.Text = ("");
             //ts = ("");
+            Console.WriteLine("ddgddgd");
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -76,9 +74,7 @@ namespace WemosWebMenu
             }
 
             String ts = (this.textBoxEntry.Text);   // get entry 
-
-            // DataSent.Text = ("Wemos check" + wemosIpSel + "\n" + WeMosAddress);
-            this.dataEnteredLabel.Text = (ts);                // assign the label to the new entry       
+            this.dataEnteredLabel.Text = (ts + "\n");                // assign the label to the new entry       
             if (ts == "")                           // anything entered???
             {
                 this.dataStatusLabel.Text = "No data received"; // blank entry
@@ -91,40 +87,29 @@ namespace WemosWebMenu
 
             if (ts != "")                                   // we have something
             {
-
                 tempCounter = counter;
-                //      this.WemosWebDebugMenu.Url = new System.Uri("http://192.168.1.1", UriKind.RelativeOrAbsolute);
                 try
                 {
                     WemosWebDebugMenu.Url = new System.Uri("http://" + ts, System.UriKind.Absolute);
                 }
-                //catch (UriFormatException)
                 catch (UriFormatException)
                 {
                     this.dataStatusLabel.BackColor = System.Drawing.Color.Red;
                     this.dataStatusLabel.Text = "Invalid data";
-                    MessageBox.Show("Exception captured\n Invalid URI: The hostname could not be parsed\n");
+                    MessageBox.Show("Exception captured\n Invalid URI: Web page don't exist, The hostname could not be parsed\n");
                     ExceptionFound = true;
                     this.dataStatusLabel.BackColor = System.Drawing.Color.Blue;
                     this.dataStatusLabel.Text = "Was invalid data";
-
                     tempCounter = tempCounter - 1;
                     counter = tempCounter;
-                    //      tempCounter=counter-1;
                     textBoxEntry.Text = ("");
                     return;
                 }
                 finally
                 {
                     rtbDataSent.Text = ("Finally done" + "\n" + " Page now http://" + ts + " \n " + " Previous page... " + WemosWebDebugMenu.Url + " \n tempCounter :" + tempCounter + " \n current counter " + counter);
-
-
-                    //DataSent.Text = (" Check ok"+"\n" + "Page now http://" + ts + " \n " + "Previous page... " + WemosWebDebugMenu.Url + " \n tempCounter :" + tempCounter + " \n current counter " + counter);
                     ExceptionFound = false;
-
                 }
-                //          this.WemosWebDebugMenu.Url = new System.Uri("http://" + ts, System.UriKind.RelativeOrAbsolute);
-                //          MessageBox.Show("http://" + ts + " : " + WemosWebDebugMenu.Url + counter);
                 if (ExceptionFound != true)
                 {
                     switch (counter)
@@ -132,7 +117,6 @@ namespace WemosWebMenu
                         case 1:
                             {
                                 button1.Text = ts;
-                                //button1.Text = textBox1.Text;
                                 counter++;
                                 break;
                             }
@@ -158,14 +142,6 @@ namespace WemosWebMenu
                                 break;
                             }
                     }
-                    /* if (ExceptionFound == false)
-                     {
-                         counter = counter + 1;
-                     }
-                     else if (ExceptionFound == true)
-                     {
-                         counter = counter - 1;
-                     }*/
                     if (counter == 5)
                     {
                         counter = 1;
@@ -175,24 +151,6 @@ namespace WemosWebMenu
                 }
             }
         }
-        /*
-       private void textBox1_MouseClick(object sender, MouseEventArgs e)
-       {
-           textBoxEntry.Text = textBox1.Text;
-       }
-       private void textBox2_MouseClick(object sender, MouseEventArgs e)
-       {
-           textBoxEntry.Text = textBox2.Text;
-       }
-       private void textBox3_MouseClick(object sender, MouseEventArgs e)
-       {
-           textBoxEntry.Text = textBox3.Text;
-       }
-       private void textBox4_MouseClick(object sender, MouseEventArgs e)
-       {
-           textBoxEntry.Text = textBox4.Text;
-       }
-       */
         //
         //  These functions let you pick a previous entry from the our that have been entered
         //
@@ -216,9 +174,51 @@ namespace WemosWebMenu
             textBoxEntry.Text = button4.Text;
             // button4.Text = textBox4.Text;
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1/RELON";
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1/RELOFF";
+        }
+
+        private void clr_Click(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1/REL1";
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1/REL2";
+        }
+
+        private void button5_Click_1(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1/REL3";
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1/REL4";
+        }
+
+        private void WeHome(object sender, EventArgs e)
+        {
+            textBoxEntry.Text = "192.168.4.1";
+        }
+
         private void button5_Click(object sender, EventArgs e)
         {
             textBoxEntry.Text = "192.168.4.1";
+
         }
     }
 }
